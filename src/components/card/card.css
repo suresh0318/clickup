@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  width: 20rem;
+  height: 10rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+}
+.card > h6 {
+  color: grey;
+}
+.card > p {
+  color: grey;
+  font-size: large;
+  margin-left: 1rem;
+}
+.flag {
+  margin-left: 1rem;
+}
