@@ -1,6 +1,7 @@
 import React from "react";
 import "./sidebar.css";
 import { AiOutlineHome, AiOutlineBell } from "react-icons/ai";
+
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -15,7 +16,9 @@ const Sidebar = () => {
           src="https://app-cdn.clickup.com/assets/images/brand/clickup-text.svg"
           alt="logo"
         />
+        
       </div>
+     
       <div className="menu-items">
         <Link to="/" style={{ color: "inherit", textDecoration: "inherit" }}>
           <div className="menu-item">

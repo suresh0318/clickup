@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+
 import {
   AiOutlineBell,
   AiOutlineBars,
@@ -24,7 +24,7 @@ const Navbar = () => {
   return (
     <div className="navbar ">
       <div className="left">
-        <GiHamburgerMenu />
+        
         <Link to="/" style={{ color: "inherit", textDecoration: "inherit" }}>
           <h6>Dashboard</h6>
         </Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
           to="/login"
           style={{ color: "inherit", textDecoration: "inherit" }}
         >
-          <FaUserAlt style={styles} />
+          <FaUserAlt style={styles} className="user"/>
         </Link>
         <h6>{name}</h6>
         <AiOutlineAppstoreAdd style={{ margin: "0 1rem 0 " }} />

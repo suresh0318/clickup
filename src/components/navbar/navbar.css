@@ -4,7 +4,7 @@
     position: relative;
      left:16%;
      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-     border-radius: 10px;
+    
    }
    .left{
        display: flex;
@@ -17,13 +17,14 @@
       align-self: center;
       justify-content: center;
    }
-   @media only screen and (max-width: 1024px) {
-    .right{font-size: medium;}
-}
-   @media only screen and (max-width: 768px) {
-    .right{font-size: small;}
-   }
-   @media only screen and (max-width: 600px) {
-    .right{visibility:hidden;}
+   .user{
+       position: relative;
+       top: -5px;
    }
 
+
+   @media only screen and (max-width: 700px){
+    .right{
+        visibility: hidden;
+    }
+  }

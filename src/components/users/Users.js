@@ -2,26 +2,27 @@ import React from "react";
 import "./users.css";
 import Data from "../../Data";
 import { FiUsers } from "react-icons/fi";
-import { ProgressBar } from "react-bootstrap";
+
 const Users = () => {
   return (
     <div className="users ">
-      <table className="table table-hover shadow-lg p-3 mb-5 bg-white rounded">
+      <table  className="table table-hover shadow-lg m-3 bg-white bordered">
         <thead>
           <tr>
             <th scope="col">
               <FiUsers />
             </th>
             <th scope="col">User</th>
-            <th scope="col">Age</th>
+            <th scope="col">Country</th>
             <th scope="col">Usage</th>
+            <th scope="col" className="d-flex justify-content-center">Payment Method</th>
             <th scope="col">Registered</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody >
           {Data.map((user) => {
             return (
-              <tr>
+              <tr key={user._id}>
                 <th scope="row">
                   <img src={user.picture} alt={user.name} />
                   <div
@@ -30,14 +31,15 @@ const Users = () => {
                   ></div>
                 </th>
                 <td>{user.name}</td>
-                <td>{user.age}</td>
                 <td>
-                  <ProgressBar
-                    variant={user.age < 30 ? "success" : "danger"}
-                    now={user.age}
-                    height={10}
-                  />
+                <img src={user.country} alt={user.name} />
                 </td>
+                
+                <td >
+                 <b>{user.age}%</b>
+                 <div style={{ width: `${user.age}%`, background: user.age > 70 ? "red" : (user.age > 50 ? "#996ce8" : (user.age > 30 && "#ffd82d")) }} className='bar'></div>
+                </td>
+                <td  className="d-flex justify-content-center"> <img src={user.payment} alt={user.name} className="center"/></td>
                 <td>{user.registered}</td>
               </tr>
             );
